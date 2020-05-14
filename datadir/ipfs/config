@@ -1,0 +1,181 @@
+{
+  "API": {
+    "HTTPHeaders": {}
+  },
+  "Addresses": {
+    "API": "/ip4/127.0.0.1/tcp/5001",
+    "Announce": [],
+    "Gateway": "/ip4/127.0.0.1/tcp/8080",
+    "NoAnnounce": [
+      "/ip4/10.0.0.0/ipcidr/8",
+      "/ip4/100.64.0.0/ipcidr/10",
+      "/ip4/169.254.0.0/ipcidr/16",
+      "/ip4/172.16.0.0/ipcidr/12",
+      "/ip4/192.0.0.0/ipcidr/24",
+      "/ip4/192.0.0.0/ipcidr/29",
+      "/ip4/192.0.0.8/ipcidr/32",
+      "/ip4/192.0.0.170/ipcidr/32",
+      "/ip4/192.0.0.171/ipcidr/32",
+      "/ip4/192.0.2.0/ipcidr/24",
+      "/ip4/192.168.0.0/ipcidr/16",
+      "/ip4/198.18.0.0/ipcidr/15",
+      "/ip4/198.51.100.0/ipcidr/24",
+      "/ip4/203.0.113.0/ipcidr/24",
+      "/ip4/240.0.0.0/ipcidr/4",
+      "/ip6/100::/ipcidr/64",
+      "/ip6/2001:2::/ipcidr/48",
+      "/ip6/2001:db8::/ipcidr/32",
+      "/ip6/fc00::/ipcidr/7",
+      "/ip6/fe80::/ipcidr/10"
+    ],
+    "Swarm": [
+      "/ip4/0.0.0.0/tcp/40405",
+      "/ip6/::/tcp/40405"
+    ]
+  },
+  "AutoNAT": {},
+  "Bootstrap": [
+    "/ip4/206.81.23.186/tcp/40403/p2p/QmTHDLnNMAp6K8txLmJW6EHUbwoHTGhkEUBCp4gAtpNqKY",
+    "/ip4/165.227.91.202/tcp/40403/p2p/QmZ9VnVZsokXEttRYiHbHmCUBSdzSQywjj5wM3Me96XoVD"
+  ],
+  "Datastore": {
+    "BloomFilterSize": 0,
+    "GCPeriod": "1h",
+    "HashOnRead": false,
+    "Spec": {
+      "mounts": [
+        {
+          "child": {
+            "path": "blocks",
+            "shardFunc": "/repo/flatfs/shard/v1/next-to-last/2",
+            "sync": true,
+            "type": "flatfs"
+          },
+          "mountpoint": "/blocks",
+          "prefix": "flatfs.datastore",
+          "type": "measure"
+        },
+        {
+          "child": {
+            "compression": "none",
+            "path": "datastore",
+            "type": "levelds"
+          },
+          "mountpoint": "/",
+          "prefix": "leveldb.datastore",
+          "type": "measure"
+        }
+      ],
+      "type": "mount"
+    },
+    "StorageGCWatermark": 90,
+    "StorageMax": "10GB"
+  },
+  "Discovery": {
+    "MDNS": {
+      "Enabled": false,
+      "Interval": 10
+    }
+  },
+  "Experimental": {
+    "FilestoreEnabled": true,
+    "GraphsyncEnabled": false,
+    "Libp2pStreamMounting": false,
+    "P2pHttpProxy": false,
+    "QUIC": false,
+    "ShardingEnabled": false,
+    "StrategicProviding": false,
+    "UrlstoreEnabled": false
+  },
+  "Gateway": {
+    "APICommands": [],
+    "HTTPHeaders": {
+      "Access-Control-Allow-Headers": [
+        "X-Requested-With",
+        "Range",
+        "User-Agent"
+      ],
+      "Access-Control-Allow-Methods": [
+        "GET"
+      ],
+      "Access-Control-Allow-Origin": [
+        "*"
+      ]
+    },
+    "NoDNSLink": false,
+    "NoFetch": false,
+    "PathPrefixes": [],
+    "PublicGateways": null,
+    "RootRedirect": "",
+    "Writable": false
+  },
+  "Identity": {
+    "PeerID": "QmVejX4byE6vw94sssTVsGQUDGj7Y893Zy2HDoArway1pz",
+    "PrivKey": "CAASqgkwggSmAgEAAoIBAQCjryb+iRv/UcAbBw/A5HToOYuPVA/9n6fWot6S1dlRWhIfGhK7k3D90rPQDJejHLk/VHrqDyNe3DLO5lMkO3ee9XHO8r0eYz43LZD2UxCo1w0t7PbaU/pYo2Jl8g1plv3zDV1H70Dqi1YCALmh6S1BJ5h0Tx4FXm5MCED3QZVev+Mk8Z0qfYh81jY0ChyzBNwbFznkfcCv5yHFLZq3cNjWplCO1msjw0h1oudesr6bKIZ1cb8JAG/Z842uygueQLzpBZEkDBO8Mg/pDjbl8qF+Q9V9aAfwQwEKAJ4Kgnco4UqlnZRImELEKPqThSab2/i+SLYgxjNjMqWZ+DAD1PHfAgMBAAECggEBAJ/Crw61CGyVgClhJREiarDWqc7FP65OjGTEJvWuYCQ1A4bzzeDjMd+sLfEcuUxtFqonbKjTCbTmu3iR+ghdOo4eBmz1I31rZCg7A0hJHvOMosJ2jSHf4XNuVPYn4Mt0onz+SFOTxAqo4NOnnYfYrWDwoq6zIhwfZQw06iPrET2eAMwrvgxW2qqv8v4qZCF1vtE6BejO0LmZJZaQZJn6AlJR7DZPbj7+XaBhCdiUxNpQYx4JiHOSReeJnFJq23MCDkcIqcjxnoicZZP5rSnLuyB11rXGuslkB8MyBIT1eI4PwQ3c1sLkp9eAuWRI00a1x/XIW3+3lBGy0SaJaT8dWBECgYEAxKE/2aEcQ147T1tZOfyQ+e2r9Zw9YlLk0C52QvtJe966K+wa0rKNGN/zjbFR3hYr1q7ScdXmn5d701GpyfnBnlD0ziBykgHCWP84ieXWkMyQaEo2OFhjUS/8J1Fg/OmndKIlPI/4M/PnCY1oJq6IcLjfavhDxVZrDk9EzYmmrnsCgYEA1RtTJQk+iRfvYUFI9QsEoZx5gn73MhL6bgVgAvwGduiubZ4VcOQ69kFZeMZ6MFFKZvWg7raHGw1YbIW1+fslAq/Tir7o1sfQ1lxSjbbDWbM96VTazWxyi1jq8HjRD41arEfqNWqBjPvg5PUadtDqO5MDZPKYtu541XB8jnFJHu0CgYEAqQ3iMaBdBmbMI2xsiHhnxRnc0Kxl8lVGuN5ZezlFcqSJ+B1k6mXs/cf+RIKB2qnBQzDHamv3fprlMUhy7F45Y35DG722A2ZTy+SSnazoD1JxjdjQSR1lNnZFGyDSfF//Qz3tOeamBTTcHNBhDXDdidzI6dVNnyqvnHv2sah5kGUCgYEAtP4xHpp8V1lRwQr+mMgT1eKcvL1y2z+NHFZKVh6Qqvsx8f26fhgJD88u20nOyyyvgUSKu1Og6dPqzri9dqPbqi2FACjmfkxUzUq5/oxD2/JE2eBsuN2rZzhMyZIDFS9b3Ehz3YwonYHrXung4RrMZW6WCm2UUIG3dKfF0gDbNn0CgYEAvOFcmuOYJKOLOA2UesCHHukX0LHZmWndQHqA7puymoT388JgFzHPaYirSO1Ia4IdOwUqdkKqh764niybNarnSvouhV4E78f8k+DkDMF76wD5APeM9YzDBZzEdm7mzXnk2F1eD5I5w79zJvAQ7q8R3NnAlW0leAm3lQbXPM8uM1g="
+  },
+  "Ipns": {
+    "RecordLifetime": "",
+    "RepublishPeriod": "",
+    "ResolveCacheSize": 128
+  },
+  "Mounts": {
+    "FuseAllowOther": false,
+    "IPFS": "/ipfs",
+    "IPNS": "/ipns"
+  },
+  "Plugins": {
+    "Plugins": null
+  },
+  "Provider": {
+    "Strategy": ""
+  },
+  "Pubsub": {
+    "DisableSigning": false,
+    "Router": "",
+    "StrictSignatureVerification": false
+  },
+  "Reprovider": {
+    "Interval": "12h",
+    "Strategy": "all"
+  },
+  "Routing": {
+    "PrivateType": "",
+    "Type": "dht"
+  },
+  "Swarm": {
+    "AddrFilters": [
+      "/ip4/10.0.0.0/ipcidr/8",
+      "/ip4/100.64.0.0/ipcidr/10",
+      "/ip4/169.254.0.0/ipcidr/16",
+      "/ip4/172.16.0.0/ipcidr/12",
+      "/ip4/192.0.0.0/ipcidr/24",
+      "/ip4/192.0.0.0/ipcidr/29",
+      "/ip4/192.0.0.8/ipcidr/32",
+      "/ip4/192.0.0.170/ipcidr/32",
+      "/ip4/192.0.0.171/ipcidr/32",
+      "/ip4/192.0.2.0/ipcidr/24",
+      "/ip4/192.168.0.0/ipcidr/16",
+      "/ip4/198.18.0.0/ipcidr/15",
+      "/ip4/198.51.100.0/ipcidr/24",
+      "/ip4/203.0.113.0/ipcidr/24",
+      "/ip4/240.0.0.0/ipcidr/4",
+      "/ip6/100::/ipcidr/64",
+      "/ip6/2001:2::/ipcidr/48",
+      "/ip6/2001:db8::/ipcidr/32",
+      "/ip6/fc00::/ipcidr/7",
+      "/ip6/fe80::/ipcidr/10"
+    ],
+    "ConnMgr": {
+      "GracePeriod": "40s",
+      "HighWater": 50,
+      "LowWater": 30,
+      "Type": "basic"
+    },
+    "DisableBandwidthMetrics": true,
+    "DisableNatPortMap": true,
+    "DisableRelay": false,
+    "EnableAutoNATService": false,
+    "EnableAutoRelay": true,
+    "EnableRelayHop": true
+  }
+}

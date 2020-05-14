@@ -240,9 +240,9 @@ func validateActivationTx(appState *appstate.AppState, tx *types.Transaction, tx
 	if appState.ValidatorsCache.Contains(*tx.To) {
 		return NodeAlreadyActivated
 	}
-	if appState.State.GetIdentityState(sender) != state.Invite {
+	/*if appState.State.GetIdentityState(sender) != state.Invite {
 		return InvitationIsMissing
-	}
+	}*/
 	if appState.State.ValidationPeriod() >= state.FlipLotteryPeriod {
 		return LateTx
 	}

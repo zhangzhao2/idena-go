@@ -1,7 +1,7 @@
 package config
 
 import "github.com/urfave/cli"
-
+//0x61C19b3db4b6E29f94471ee34b6E5Fc85fCf6de9
 const (
 	DefaultDataDir          = "datadir"
 	DefaultPort             = 40404
@@ -9,8 +9,8 @@ const (
 	DefaultRpcPort          = 9009
 	DefaultIpfsDataDir      = "ipfs"
 	DefaultIpfsPort         = 40405
-	DefaultGodAddress       = "0x4d60dc6a2cba8c3ef1ba5e1eba5c12c54cee6b61"
-	DefaultCeremonyTime     = int64(1567171800)
+	DefaultGodAddress       = "0x61C19b3db4b6E29f94471ee34b6E5Fc85fCf6de9"
+	DefaultCeremonyTime     = int64(1589765400)
 	DefaultSwarmKey         = "9ad6f96bb2b02a7308ad87938d6139a974b550cc029ce416641a60c46db2f530"
 	DefaultForceFullSync    = 100
 	DefaultStoreCertRange   = 2000

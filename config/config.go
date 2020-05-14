@@ -231,7 +231,7 @@ func getDefaultConfig(dataDir string) *Config {
 
 	return &Config{
 		DataDir: dataDir,
-		Network: 0x1, // testnet
+		Network: 0x3, // testnet
 		P2P: P2P{
 			MaxInboundPeers:  DefaultMaxInboundPeers,
 			MaxOutboundPeers: DefaultMaxOutboundPeers,
